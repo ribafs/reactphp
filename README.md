@@ -133,6 +133,11 @@ https://github.com/ribafs/reactphp-simple-crud
 - https://github.com/ReactiveX/RxPHP
 - https://framework-x.org/
 - https://github.com/clue/framework-x
+- https://github.com/ratchetphp/Ratchet
+- https://github.com/amphp/amp
+- https://github.com/thephpleague/event
+- https://github.com/igorw/evenement
+- https://github.com/recoilphp/recoil
 
 
 ## Referências
