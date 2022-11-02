@@ -12,6 +12,29 @@ No seu núcleo está um loop de eventos, em cima do qual fornece utilitários de
 
 Bibliotecas de terceiros podem usar esses componentes para criar clientes/servidores de rede assíncrona e muito mais.
 
+A palavra chave em React é assíncrono. Esta é a maior ideia por trás da coleção de bibliotecas que vemos consigo. PHP, por natureza, é dito "bloqueante". Isto significa que cada procedimento só virá a ser executado após o anterior.
+
+Exemplo:
+
+```php
+echo 'Obtendo o arquivo...';
+// Executa somente após a linha 3
+$conteudo = file_get_contents('umArquivoPesado.txt');
+// Executa somente após a linha 5, e assim por diante...
+if ($conteudo) {
+    echo 'Arquivo obtido com sucesso! :)';
+}
+```
+Estamos de fato acostumados com este cenário. Porém isto passa a ser problemático quando umArquivoPesado.txt leva alguns segundos para ser carregado à memória.
+
+O ponto é: PHP bloqueia a cada comando executado e os comandos que fazem entrada/saída (acesso a disco, acesso a rede...) de dados tendem a ser mais demorados que comandos internos de processamento (um echo, um if, um cálculo...).
+
+React PHP vem com o intuito, justamente, de permitir que executemos pedaços de lógica em paralelo. Nada que não pudesse ser feito com PHP antes, mas React traz uma interface orientada a objetos muito bem organizada e que nos facilita esta utilização.
+
+Mais detalhes em:
+- https://phpsp.org.br/artigos/react-php-conceitos-basicos-eventloop/
+- https://www.treinaweb.com.br/blog/introducao-a-programacao-assincrona-em-php-usando-o-reactphp
+
 
 ## Pequeno Hello World em ReactPHP
 
